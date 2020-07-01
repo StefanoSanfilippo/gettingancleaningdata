@@ -1,0 +1,53 @@
+---
+title: "README"
+author: "StefanoSanfilippo"
+date: "1/7/2020"
+output: html_document
+---
+
+## How to generate the data frames, step-by-step
+
+**Step 1**: Download the the zip from the url indicated:
+"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+
+**Step 2**: Unzip the documents in the work directory.
+
+**Step 3**: the data frames we will be using are: X_test, X_train, subject_test, subject_train, y_test*, y_train, features:
+
+*X_test*: it is a test set of 2947 observations and 561 numeric variables, which record, using an embedded accelerometer and gyroscope, 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz.
+
+*X_train*: it is a train set of 7352 observations and the same variables as in the X_test dataset.
+
+*subject_test*: it is a vector of 2947 elements recording any subject for any observation in data_testdataset: in total we have 30 subjects, that are marked with a number from 1 through 30.
+
+*subject_train*: it is a vector of 7352 elements recording any subject for any observation in data_train dataset: in total we have 30 subjects, that are marked with a number from 1 through 30.
+
+*y_test*: it is a vector of 2947 elements recording any the activity label for any observation in data_test dataset: we have 6 diferent label, that are marked with a number from 1 through 6: 1 WALKING,2 WALKING_UPSTAIRS, 3 WALKING_DOWNSTAIRS, 4 SITTING, 5 STANDING, 6 LAYING
+
+*y_train*: it is a vector of 7352 elements recording any the activity label for any observation in data_train dataset: we have 6 diferent label, that are marked with a number from 1 through 6: 1 WALKING,2 WALKING_UPSTAIRS, 3 WALKING_DOWNSTAIRS, 4 SITTING, 5 STANDING, 6 LAYING
+
+*features*: it is a list of the 561 measurement variables.
+
+**Step 4**: read the data frames, putting more intellegible neames:
+data_test, data_train, activity_test, activity_train, subject_test, subject_train, var_names.
+
+**Step 5**: Using the dplyr package, rename the variable of subject_test, subject_train, activity_test and activity_train.
+
+**Step 5b**: Using the base package we rename the columns of data_test and data_train using var_names.
+
+**Step 6**: using cbind() function we can bind subject_test with activity_test (2947 observations) and subject_train with activity_train (7352 observations).
+
+**Step 7**: Add the column "dataset" to both data sets. When both datasets will be merged, this column will allow to know where every observation come from, and to return to the original data set, if necessary.
+
+**Step 8**: Using rbind merge data_test and data_train sets into data_test_train.
+
+**Step 8b**: Using rbind, merge subj_act_test and subj_act_train into one set: subj_act_all. 
+
+**Step 9**: using the grep() function we can extract the measurements on mean and standard deviation, creating a data frame called data_test_train_narrow with 79 variables.
+
+**Step 10**: Using cbind() we can unite subj_act_all with data_test_train_narrow creating the data frame alldata with 10299 rows and 82 columns.
+
+**Step 11**: Using Using ifelse () function substitute descriptive text strings, to the numeric values, following the description of step 3 (y_test and y_train).
+
+**Step 12**: Create the new dataset allmeans from alldata, grouping data by subject and activity (group_by()) and using summarise_at() to calculate multiple means.
+Note that a new data frame will be generated of 180 rows (30 subjects x 6 activities) and 81 columns (subject, activity, and 79 mean measurement variables). 

@@ -1,0 +1,45 @@
+---
+title: "Getting and Cleaning Data Course Project"
+author: "StefanoSanfilippo"
+date: "1/7/2020"
+output: html_document
+---
+## CODE BOOK
+
+### Data frame: alldata
+
+#### **Variables:**
+
+**"subject":** numeric 1:30. It indicates the subject. Generated from "subject_test.txt" and "subject_train.txt"
+
+**"activity":** character. Generated from "y-test.txt" and "y_train.txt". It labels any observation by one among 6 activities:  1 WALKING,2 WALKING_UPSTAIRS, 3 WALKING_DOWNSTAIRS, 4 SITTING, 5 STANDING, 6 LAYING (see "activity labels".                    
+
+**"dataset":** character. It indicates if the original data set was test or data. 
+
+#### **Measurements:**
+
+Here we have the variables that represent **measurements** of mean and std values. The values can range between -1 and +1.
+
+"tBodyAcc-mean()-X", "tBodyAcc-mean()-Y", "tBodyAcc-mean()-Z", "tBodyAcc-std()-X","tBodyAcc-std()-Y", "tBodyAcc-std()-Z", "tGravityAcc-mean()-X", "tGravityAcc-mean()-Y", "tGravityAcc-mean()-Z", "tGravityAcc-std()-X", "tGravityAcc-std()-Y", "tGravityAcc-std()-Z", "tBodyAccJerk-mean()-X",  "tBodyAccJerk-mean()-Y", "tBodyAccJerk-mean()-Z", "tBodyAccJerk-std()-X", "tBodyAccJerk-std()-Y", "tBodyAccJerk-std()-Z", "tBodyGyro-mean()-X", "tBodyGyro-mean()-Y", "tBodyGyro-mean()-Z", "tBodyGyro-std()-X", "tBodyGyro-std()-Y", "tBodyGyro-std()-Z", "tBodyGyroJerk-mean()-X", "tBodyGyroJerk-mean()-Y", "tBodyGyroJerk-mean()-Z", "tBodyGyroJerk-std()-X", "tBodyGyroJerk-std()-Y", "tBodyGyroJerk-std()-Z", "tBodyAccMag-mean()", "tBodyAccMag-std()", "tGravityAccMag-mean()", "tGravityAccMag-std()", "tBodyAccJerkMag-mean()", "tBodyAccJerkMag-std()", "tBodyGyroMag-mean()", "tBodyGyroMag-std()", "tBodyGyroJerkMag-mean()", "tBodyGyroJerkMag-std()", "fBodyAcc-mean()-X", "fBodyAcc-mean()-Y", "fBodyAcc-mean()-Z", "fBodyAcc-std()-X", "fBodyAcc-std()-Y", "fBodyAcc-std()-Z"
+"fBodyAcc-meanFreq()-X", "fBodyAcc-meanFreq()-Y", "fBodyAcc-meanFreq()-Z", "fBodyAccJerk-mean()-X", "fBodyAccJerk-mean()-Y", "fBodyAccJerk-mean()-Z", "fBodyAccJerk-std()-X", "fBodyAccJerk-std()-Y", "fBodyAccJerk-std()-Z", "fBodyAccJerk-meanFreq()-X", "fBodyAccJerk-meanFreq()-Y", "fBodyAccJerk-meanFreq()-Z", "fBodyGyro-mean()-X", "fBodyGyro-mean()-Y", "fBodyGyro-mean()-Z", "fBodyGyro-std()-X", "fBodyGyro-std()-Y", "fBodyGyro-std()-Z", "fBodyGyro-meanFreq()-X", "fBodyGyro-meanFreq()-Y", "fBodyGyro-meanFreq()-Z", "fBodyAccMag-mean()", "fBodyAccMag-std()", "fBodyAccMag-meanFreq()", "fBodyBodyAccJerkMag-mean()", "fBodyBodyAccJerkMag-std()", "fBodyBodyAccJerkMag-meanFreq()", "fBodyBodyGyroMag-mean()", "fBodyBodyGyroMag-std()", "fBodyBodyGyroMag-meanFreq()", "fBodyBodyGyroJerkMag-mean()", "fBodyBodyGyroJerkMag-std()", "fBodyBodyGyroJerkMag-meanFreq()".
+
+
+### Data frame: allmeans
+
+#### **Variables:**
+
+**"subject":** numeric 1:30. It indicates the subject. Generated from "subject_test.txt" and "subject_train.txt"
+
+**"activity":** character. Generated from "y-test.txt" and "y_train.txt". It labels any observation by one among 6 activities:  1 WALKING,2 WALKING_UPSTAIRS, 3 WALKING_DOWNSTAIRS, 4 SITTING, 5 STANDING, 6 LAYING (see "activity labels".                    
+
+
+#### **Measurements:**
+
+Here we have the variables that represent the **averages** of mean and std measurements, for each activity and each subject:
+
+"tBodyAcc-mean()-X_mean", "tBodyAcc-mean()-Y_mean", "tBodyAcc-mean()-Z_mean", "tBodyAcc-std()-X_mean", "tBodyAcc-std()-Y_mean", "tBodyAcc-std()-Z_mean",  "tGravityAcc-mean()-X_mean", "tGravityAcc-mean()-Y_mean", "tGravityAcc-mean()-Z_mean", "tGravityAcc-std()-X_mean", "tGravityAcc-std()-Y_mean", "tGravityAcc-std()-Z_mean", "tBodyAccJerk-mean()-X_mean", "tBodyAccJerk-mean()-Y_mean", "tBodyAccJerk-mean()-Z_mean"           "tBodyAccJerk-std()-X_mean",  "tBodyAccJerk-std()-Y_mean", "tBodyAccJerk-std()-Z_mean", "tBodyGyro-mean()-X_mean", "tBodyGyro-mean()-Y_mean", "tBodyGyro-mean()-Z_mean", "tBodyGyro-std()-X_mean", "tBodyGyro-std()-Y_mean", "tBodyGyro-std()-Z_mean", "tBodyGyroJerk-mean()-X_mean", "tBodyGyroJerk-mean()-Y_mean", "tBodyGyroJerk-mean()-Z_mean"          "tBodyGyroJerk-std()-X_mean", "tBodyGyroJerk-std()-Y_mean", "tBodyGyroJerk-std()-Z_mean", "tBodyAccMag-mean()_mean", "tBodyAccMag-std()_mean", "tGravityAccMag-mean()_mean", "tGravityAccMag-std()_mean", "tBodyAccJerkMag-mean()_mean", "tBodyAccJerkMag-std()_mean", "tBodyGyroMag-mean()_mean", "tBodyGyroMag-std()_mean","tBodyGyroJerkMag-mean()_mean", "tBodyGyroJerkMag-std()_mean", "fBodyAcc-mean()-X_mean", "fBodyAcc-mean()-Y_mean", "fBodyAcc-mean()-Z_mean", "fBodyAcc-std()-X_mean", "fBodyAcc-std()-Y_mean", "fBodyAcc-std()-Z_mean", "fBodyAcc-meanFreq()-X_mean", "fBodyAcc-meanFreq()-Y_mean", "fBodyAcc-meanFreq()-Z_mean", "fBodyAccJerk-mean()-X_mean", "fBodyAccJerk-mean()-Y_mean", "fBodyAccJerk-mean()-Z_mean", "fBodyAccJerk-std()-X_mean", "fBodyAccJerk-std()-Y_mean", "fBodyAccJerk-std()-Z_mean", "fBodyAccJerk-meanFreq()-X_mean", "fBodyAccJerk-meanFreq()-Y_mean", "fBodyAccJerk-meanFreq()-Z_mean", "fBodyGyro-mean()-X_mean","fBodyGyro-mean()-Y_mean", "fBodyGyro-mean()-Z_mean", "fBodyGyro-std()-X_mean", "fBodyGyro-std()-Y_mean", "fBodyGyro-std()-Z_mean", "fBodyGyro-meanFreq()-X_mean", "fBodyGyro-meanFreq()-Y_mean", "fBodyGyro-meanFreq()-Z_mean", "fBodyAccMag-mean()_mean", "fBodyAccMag-std()_mean", "fBodyAccMag-meanFreq()_mean", "fBodyBodyAccJerkMag-mean()_mean", "fBodyBodyAccJerkMag-std()_mean", "fBodyBodyAccJerkMag-meanFreq()_mean", "fBodyBodyGyroMag-mean()_mean", "fBodyBodyGyroMag-std()_mean", "fBodyBodyGyroMag-meanFreq()_mean", "fBodyBodyGyroJerkMag-mean()_mean"     "fBodyBodyGyroJerkMag-std()_mean", "fBodyBodyGyroJerkMag-meanFreq()_mean"
+
+
+
+
+
